@@ -49,7 +49,7 @@ make fclean
 
 ### Use of AI
 I used AI on this project to help me with a few tasks:
-* **Debugging**: Analyzed and explained ```ThreadSanitizer``` logs due to Data Race or Deadlock.
+* **Debugging**: Analyzed and explained ```ThreadSanitizer``` logs due to Data Race or Deadlock. Also helped me for the Makefile.
 
  * **Exercises**: Created a few practical exercises at the beginning of the project to help me practice handling ```pthread``` and ```mutex```.
 

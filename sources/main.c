@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:02:47 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 09:01:45 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:29:53 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosopher.h"
+#include "../include/philosopher.h"
 
 int	main(int argc, char **argv)
 {

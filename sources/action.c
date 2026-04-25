@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 10:30:04 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 10:49:23 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:29:28 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosopher.h"
+#include "../include/philosopher.h"
 
 int	ft_fork_even(t_philo *philo, struct timeval tv)
 {

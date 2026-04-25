@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 12:57:40 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/24 17:32:37 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:29:56 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosopher.h"
+#include "../include/philosopher.h"
 
 int	ft_init_data(t_data *data)
 {

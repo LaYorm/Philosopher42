@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:54:48 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/24 12:57:36 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:30:00 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosopher.h"
+#include "../include/philosopher.h"
 
 int	ft_all_num(char *arg)
 {

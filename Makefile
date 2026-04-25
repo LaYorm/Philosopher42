@@ -1,19 +1,24 @@
 NAME = philo
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I$(INC_DIR)
 
-SRC = main.c check_init_arg.c init_structure.c clean_free.c routine.c \
+OBJ_DIR = objs/
+SRC_DIR = sources/
+INC_DIR = include/
+
+SRC_FILES = main.c check_init_arg.c init_structure.c clean_free.c routine.c \
 		supervisor.c action.c
-OBJ_DIR = objs
 
-OBJ = ${SRC:%.c=$(OBJ_DIR)/%.o}
+SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
+
+OBJS = $(addprefix $(OBJ_DIR), $(SRC_FILES:.c=.o))
 
 all : ${NAME}
 
-${NAME} : ${OBJ}
-			$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+${NAME} : ${OBJS}
+			$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-$(OBJ_DIR)/%.o : %.c philosopher.h
+$(OBJ_DIR)%.o : $(SRC_DIR)%.c
 			@mkdir -p $(OBJ_DIR)
 			$(CC) $(CFLAGS) -c $< -o $@
 

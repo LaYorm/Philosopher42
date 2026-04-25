@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 16:14:24 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 11:14:07 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:29:50 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosopher.h"
+#include "../include/philosopher.h"
 
 int	ft_check_death(t_philo *philo)
 {

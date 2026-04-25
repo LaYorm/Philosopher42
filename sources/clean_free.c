@@ -6,11 +6,11 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 15:30:20 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/24 19:20:07 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 12:29:58 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philosopher.h"
+#include "../include/philosopher.h"
 
 int	ft_wait(t_philo **philo, pthread_t *supervisor)
 {

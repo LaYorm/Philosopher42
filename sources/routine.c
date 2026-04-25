@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 16:14:24 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 13:00:24 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:09:56 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,28 @@ int	ft_check_death(t_philo *philo)
 	return (0);
 }
 
-int	ft_printf_action(t_philo *philo, int i)
+int	ft_printf_action(t_philo *philo, t_status i)
 {
 	long long		time;
-	struct timeval	tv;
 
 	if (pthread_mutex_lock(&philo->data->lock_write))
 		return (1);
-	if (gettimeofday(&tv, NULL))
-		return (1);
-	time = (tv.tv_sec * 1000 + tv.tv_usec / 1000) - philo->data->time_start;
-	if (ft_check_death(philo) && i == 4)
+	time = ft_get_time() - philo->data->time_start;
+	if (ft_check_death(philo) && i == DEAD)
 		printf("%lld %d died\n", time, philo->id);
 	else
 	{
-		if (!ft_check_death(philo) && i == 0)
-			printf("%lld %d has taken a fork\n", time, philo->id);
-		else if (!ft_check_death(philo) && i == 1)
-			printf("%lld %d is eating\n", time, philo->id);
-		else if (!ft_check_death(philo) && i == 2)
-			printf("%lld %d is sleeping\n", time, philo->id);
-		else if (!ft_check_death(philo) && i == 3)
-			printf("%lld %d is thinking\n", time, philo->id);
+		if (!ft_check_death(philo))
+		{
+			if (i == TAKE_FORK)
+				printf("%lld %d has taken a fork\n", time, philo->id);
+			else if (i == EAT)
+				printf("%lld %d is eating\n", time, philo->id);
+			else if (i == SLEEP)
+				printf("%lld %d is sleeping\n", time, philo->id);
+			else if (i == THINK)
+				printf("%lld %d is thinking\n", time, philo->id);
+		}
 	}
 	if (pthread_mutex_unlock(&philo->data->lock_write))
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:26:32 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 13:42:15 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:10:15 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,15 @@ typedef struct s_philo
 	pthread_mutex_t	lock_meal;
 }	t_philo;
 
+typedef enum e_status
+{
+	TAKE_FORK,
+	EAT,
+	SLEEP,
+	THINK,
+	DEAD,
+}	t_status;
+
 //---------CHECK_INIT_ARG----------//
 int			ft_all_num(char *arg);
 int			ft_atoi(char *arg);
@@ -66,7 +75,7 @@ long long	ft_get_time(void);
 
 //----------routine.c--------------//
 int			ft_lunch_routine(t_data *data, t_philo **philo);
-int			ft_printf_action(t_philo *philo, int i);
+int			ft_printf_action(t_philo *philo, t_status i);
 int			ft_check_death(t_philo *philo);
 void		*ft_routine(void *arg);
 

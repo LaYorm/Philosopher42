@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:26:32 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 13:27:43 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 13:41:02 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void		ft_free_all(t_philo **philo, t_data *data);
 int			ft_wait(t_philo **philo, pthread_t *supervisor);
 void		ft_usleep(long long time,t_philo *philo);
 long long	ft_get_time(void);
+
 //----------routine.c--------------//
 int			ft_lunch_routine(t_data *data, t_philo **philo);
 int			ft_printf_action(t_philo *philo, int i);

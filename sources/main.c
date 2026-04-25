@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:02:47 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 12:29:53 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 14:18:22 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 	}
 	ft_lunch_routine(&data, &philo);
 	pthread_create(&supervisor, NULL, ft_supervisor, philo);
-	if (ft_wait(&philo, &supervisor))
+	if (ft_wait_end_thread(&philo, &supervisor))
 	{
 		ft_free_all(&philo, &data);
 		return (1);

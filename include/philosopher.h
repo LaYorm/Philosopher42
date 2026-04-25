@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:26:32 by yorimek           #+#    #+#             */
-/*   Updated: 2026/04/25 10:37:52 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/04/25 13:27:43 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,32 +49,33 @@ typedef struct s_philo
 }	t_philo;
 
 //---------CHECK_INIT_ARG----------//
-int		ft_all_num(char *arg);
-int		ft_atoi(char *arg);
-int		ft_check_arg(char **argv, t_data *data);
+int			ft_all_num(char *arg);
+int			ft_atoi(char *arg);
+int			ft_check_arg(char **argv, t_data *data);
 
 //---------init_structure------------//
-int		ft_init_data(t_data *data);
-int		ft_init_philo(t_philo **philo, t_data *data);
-int		ft_init_struct(t_data *data, t_philo **philo);
+int			ft_init_data(t_data *data);
+int			ft_init_philo(t_philo **philo, t_data *data);
+int			ft_init_struct(t_data *data, t_philo **philo);
 
-//---------clean_free.c------------//
-void	ft_free_all(t_philo **philo, t_data *data);
-int		ft_wait(t_philo **philo, pthread_t *supervisor);
-
+//---------utils.c------------//
+void		ft_free_all(t_philo **philo, t_data *data);
+int			ft_wait(t_philo **philo, pthread_t *supervisor);
+void		ft_usleep(long long time,t_philo *philo);
+long long	ft_get_time(void);
 //----------routine.c--------------//
-int		ft_lunch_routine(t_data *data, t_philo **philo);
-int		ft_printf_action(t_philo *philo, int i);
-int		ft_check_death(t_philo *philo);
-void	*ft_routine(void *arg);
+int			ft_lunch_routine(t_data *data, t_philo **philo);
+int			ft_printf_action(t_philo *philo, int i);
+int			ft_check_death(t_philo *philo);
+void		*ft_routine(void *arg);
 
 //----------action.c--------------//
-int		ft_fork_even(t_philo *philo, struct timeval tv);
-int		ft_fork_odd(t_philo *philo, struct timeval tv);
+int			ft_fork_even(t_philo *philo, struct timeval tv);
+int			ft_fork_odd(t_philo *philo, struct timeval tv);
 
 //----------supervisor.c--------------//
-void	*ft_supervisor(void *arg);
-int		ft_check_nb_meal(t_philo *philo);
-int		ft_utils_death(t_philo *philo);
+void		*ft_supervisor(void *arg);
+int			ft_check_nb_meal(t_philo *philo);
+int			ft_utils_death(t_philo *philo);
 
 #endif
